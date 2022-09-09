@@ -4738,6 +4738,7 @@ NOEXPORT const char *engine_init(void) {
     s_log(LOG_INFO, "Engine #%d (%s) initialized",
         current_engine+1, ENGINE_get_id(engines[current_engine]));
     engine_initialized=1;
+    SSL_library_init();
     return NULL; /* OK */
 }
 
